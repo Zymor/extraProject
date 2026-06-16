@@ -13,12 +13,12 @@
    <children>
       <ImageView fitHeight="96.0" fitWidth="102.0" layoutX="21.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../github%20code/Group_04miniproject5/image/Logo-ITC-PNG.png" />
+            <Image url="@../../github%20code/image/Logo-ITC-PNG.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="117.0" fitWidth="96.0" layoutX="478.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../github%20code/Group_04miniproject5/image/Logo-GTR-JPG.jpg" />
+            <Image url="@../../github%20code/image/Logo-GTR-JPG.jpg" />
          </image>
       </ImageView>
       <Label layoutX="236.0" layoutY="39.0" text="EXTRA PROJECT" textFill="#c4104c">
