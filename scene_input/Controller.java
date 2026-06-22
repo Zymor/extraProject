@@ -48,7 +48,7 @@ public class Controller {
     @FXML
     void initialize() {
 
-
+    textfield_input_data.setText(Global.data);
 
     }
 
