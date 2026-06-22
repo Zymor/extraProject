@@ -1,34 +1,20 @@
-package scene_output;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-
 public class Controller {
 
     @FXML
-    private ResourceBundle resources;
+    private Label label_output;
 
     @FXML
-    private URL location;
-
-    @FXML
-    private Label label_output_data;
-
-    @FXML
-    void on_close(ActionEvent event) {
-        var stage = (javafx.stage.Stage) label_output_data.getScene().getWindow();
-
+    void on_close(ActionEvent event) throws Exception {
+        var stage = (Stage) label_output.getScene().getWindow();
         var view_output = getClass().getResource("../scene_main/View.fxml");
         var controller_output = new scene_main.Controller();
+
+        var loader = new FXMLLoader();
+        loader.setLocation(view_output);
+        loader.setController(controller_output);
+
+        var scene = new Scene(loader.load());
+        stage.setScene(scene);
+        stage.show();
     }
-
-    @FXML
-    void initialize() {
-        
-
-    }
-
 }
