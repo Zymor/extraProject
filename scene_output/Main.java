@@ -1,31 +1,26 @@
 
 
+
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-    
 public class Main extends Application {
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        //
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("view.fxml"));
-        loader.setBuilderFactory(null);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/scene_main/View.fxml"));
+        loader.setController(new scene_main.Controller());
         Parent root = loader.load();
-
+        
         Scene scene = new Scene(root);
-
         stage.setScene(scene);
         stage.show();
     }
-    ///ss
-    /// 
 }
-

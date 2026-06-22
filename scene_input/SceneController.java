@@ -3,7 +3,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-public class Controller {
+public class SceneController {
 
     @FXML
     private Button SAVE_BUTTON;
