@@ -1,43 +1,54 @@
 package scene_main;
 
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
+import javafx.scene.Scene;
 
 public class Controller {
 
     @FXML
-    private Label Label_data;
+    private ResourceBundle resources;
 
     @FXML
-    private TextField TEXTFIELD_DATA;
+    private URL location;
 
     @FXML
-    void GO_TO_INPUT_BUTTON(ActionEvent event) {
+    private Label label_data;
+
+    @FXML
+    void goto_input(ActionEvent event) throws IOException {
+        // Implementation for navigating to input scene
 
     }
 
     @FXML
-    void GO_TO_OUPUT_BUTTON(ActionEvent event) {
-       var stage = (Stage) Label_data.getScene().getWindow(); 
+    void goto_output(ActionEvent event) throws IOException {
+        // Implementation for navigating to output scene
 
-       var view_output = getClass().getResource("/scene_output/scene_output.fxml");
-       var controller_output = new scene_output.Controller();
+        var stage = (Stage) label_data.getScene().getWindow();
 
-       var loader = new FXMLLoader();
-       loader.setLocation(view_output);
-       loader.setController(controller_output);
+        var view_output = getClass().getResource("../scene_output/View.fxml");
+        var controller_output = new scene_output.Controller();
 
-        // 
-        var scence = new Scene(loader.load());
-        //
-        stage.setScene(scence); 
+        var loader = new FXMLLoader();
+        loader.setLocation(view_output);
+        loader.setController(controller_output);
+
+        var scene = new Scene(loader.load());
+
+        stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void initialize() {
 
     }
 

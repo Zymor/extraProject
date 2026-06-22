@@ -1,10 +1,10 @@
-package scene_output;
+package scene_input;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class Controller {
 
@@ -15,16 +15,16 @@ public class Controller {
     private URL location;
 
     @FXML
-    private Label label_output_data;
+    private TextField textfield_input_data;
 
     @FXML
-    void on_close(ActionEvent event) {
+    void on_save(ActionEvent event) {
 
     }
 
     @FXML
     void initialize() {
-        
+       
 
     }
 

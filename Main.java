@@ -1,10 +1,5 @@
-
-
-
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -15,19 +10,20 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        
+        //
         var view_main = getClass().getResource("scene_main/View.fxml");
         var controller_main = new scene_main.Controller();
-        
-        var loader = new FXMLLoader(); //dak controller and view
+
+        var loader = new FXMLLoader();
         loader.setLocation(view_main);
         loader.setController(controller_main);
-        
-        // 
-        var scence = new Scene(loader.load());
-        //
-        stage.setScene(scence); 
-        stage.show();
 
-        }   
-     }
+        //
+        var scene = new Scene(loader.load());
+
+        //
+        stage.getIcons().add(new javafx.scene.image.Image(getClass().getResourceAsStream("asset/Logo-ITC-PNG.png")));
+        stage.setScene(scene);
+        stage.show();
+    }
+}
