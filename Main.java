@@ -19,7 +19,7 @@ public class Main extends Application {
         var view_main = getClass().getResource("scene_main/View.fxml");
         var controller_main = new scene_main.Controller();
         
-        var loader = new FXMLLoader();
+        var loader = new FXMLLoader(); //dak controller and view
         loader.setLocation(view_main);
         loader.setController(controller_main);
         
