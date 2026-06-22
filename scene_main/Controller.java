@@ -1,3 +1,5 @@
+package scene_main;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -18,6 +20,7 @@ public class Controller {
 
     @FXML
     void GO_TO_OUPUT_BUTTON(ActionEvent event) {
+        Stage = Label_data.getScene().getWindow();
 
     }
 
