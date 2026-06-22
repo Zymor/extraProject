@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import global.Global;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +26,8 @@ public class Controller {
     @FXML
     void goto_input(ActionEvent event) throws IOException {
         // Implementation for navigating to input scene
-    var stage = (Stage) label_data.getScene().getWindow();
+
+        var stage = (Stage) label_data.getScene().getWindow();
 
         var view_input = getClass().getResource("../scene_input/View.fxml");
         var controller_input = new scene_input.Controller();
@@ -61,7 +63,7 @@ public class Controller {
 
     @FXML
     void initialize() {
-        label_data.setText(global.Global.data);
+        label_data.setText(Global.data);
 
     }
 
