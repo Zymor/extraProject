@@ -61,6 +61,7 @@ public class Controller {
 
     @FXML
     void initialize() {
+        label_data.setText(global.Global.data);
 
     }
 
