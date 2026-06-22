@@ -19,7 +19,10 @@ public class Controller {
 
     @FXML
     void on_close(ActionEvent event) {
+        var stage = (javafx.stage.Stage) label_output_data.getScene().getWindow();
 
+        var view_output = getClass().getResource("../scene_main/View.fxml");
+        var controller_output = new scene_main.Controller();
     }
 
     @FXML
